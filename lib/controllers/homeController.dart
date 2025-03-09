@@ -8,9 +8,7 @@ import 'package:zylentrix/utils/loaders.dart';
 class HomeController extends GetxController{
   static HomeController get instance=>Get.find();
   HomeRepository homeRepository=Get.put(HomeRepository());
-  final Connectivity connectivity = Connectivity();
-  late StreamSubscription<List<ConnectivityResult>> connectivity_subscription;
-  final RxList<ConnectivityResult> connectionStatus=<ConnectivityResult>[].obs;
+
   RxList<DataModel> dataList=<DataModel>[].obs;
   final isLoading=false.obs;
 
